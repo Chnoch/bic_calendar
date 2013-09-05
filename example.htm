@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://bic.cat/bic_calendar/# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Bic_Calendar example</title>
+
+        <meta name="description" content="BIC Calendar es un simple calendari per marcar esdeveniments. Un plugin de jQuery i Twitter Bootstrap">
+        <meta name="author" content="bic.cat">
+
+        <script src="./Bic_Calendar example_files/jquery.min.js"></script><style type="text/css"></style>
+
+        <script src="./Bic_Calendar example_files/bootstrap.min.js"></script>
+        <link href="http://bic.cat/bic_calendar/lib/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://bic.cat/bic_calendar/lib/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <script src="js/bic_calendar.js"></script>
+        <link href="css/bic_calendar.css" rel="stylesheet">
+
+        <style>
+       
+        </style>
+    </head>
+    <body>
+	<script>
+	$(document).ready( function(){
+
+		mesos = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+
+		dias = ["M", "D", "M", "D", "F", "S", "S"];
+
+	    $('#calendar').bic_calendar({
+	        nombresMes: mesos,
+	        dias: dias,
+	        req_ajax: {
+	        	type: 'get',
+	        	url: 'index.php'
+	        }
+	    });
+	} );
+	</script>
+	<div id="calendar"></div>
+</body></html>
